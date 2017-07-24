@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="180dp">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/update_tip"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|left"
+        custom:sLeftIconRes="@drawable/ic_warning" />
+
+    <TextView
+        android:id="@+id/update_content"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/update_rl"
+        android:layout_below="@+id/update_tip"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/update_content" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/number_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/finish_tip"
+        android:layout_below="@+id/update_tip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        custom:progress_reached_bar_height="1.5dp"
+        custom:progress_reached_color="#3498DB"
+        custom:progress_text_color="#3498DB"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_size="10sp"
+        custom:progress_text_visibility="visible"
+        custom:progress_unreached_bar_height="0.75dp"
+        custom:progress_unreached_color="#CCCCCC" />
+
+    <TextView
+        android:id="@+id/finish_tip"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/update_rl"
+        android:gravity="center"
+        android:text="@string/finish_tip"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/update_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="3">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/update_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            custom:sCenterTextColor="@color/red_btn"
+            custom:sCenterTextString="@string/update_cancel"
+            custom:sShapeCornersRadius="10dp"
+            custom:sShapeSelectorNormalColor="@color/gray"
+            custom:sShapeSelectorPressedColor="@color/gray"
+            custom:sUseShape="true" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/update_enter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            custom:sCenterTextColor="@color/white"
+            custom:sCenterTextString="@string/update_enter"
+            custom:sShapeCornersRadius="10dp"
+            custom:sShapeSelectorNormalColor="@color/red_btn"
+            custom:sShapeSelectorPressedColor="@color/red_btn"
+            custom:sUseShape="true" />
+    </LinearLayout>
+</RelativeLayout>
