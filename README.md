@@ -7,4 +7,12 @@
                 .show(R.id.right_icon)// 同上
                 .setOnClick(new int[]{R.id.left_icon, R.id.right_icon}, this)//点击事件，以数组形式添加，还有添加单个的点击事件
                 .build();
+                
+                
+# AppUpdate 
+# 首先 要感谢 lygttpod 的 SuperTextView，daimajia 的 NumberProgressBar
+# AppUpdate 使用方法 
+# 在需要 更新的位置调用如下代码
+        AppUpdate update = new AppUpdate(this);
+        update.check();
 # 更多内容 可根据源码自行定义和使用，共勉
